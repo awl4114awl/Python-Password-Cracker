@@ -1,6 +1,27 @@
 # Python Password Cracker
 
-This repository contains Python scripts for performing dictionary attacks to crack hashed passwords. The scripts range from a basic implementation to a more advanced version with additional features like multi-algorithm support and multi-threading.
+A collection of Python scripts for performing dictionary attacks to crack hashed passwords. Includes a basic version using SHA-256 and an advanced version with multi-algorithm support and multi-threading for improved performance. Ideal for learning and exploring password cracking concepts in cybersecurity.
+
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Basic Script](#basic-script)
+  - [Overview](#overview)
+  - [Step-by-Step Guide](#step-by-step-guide)
+  - [Full Code](#full-code)
+  - [Running the Script](#running-the-script)
+- [Advanced Script](#advanced-script)
+  - [Enhancing the Basic Script](#enhancing-the-basic-script)
+  - [Full Code](#full-code-1)
+  - [Running the Script](#running-the-script-1)
+- [Obtaining a Dictionary File](#obtaining-a-dictionary-file)
+  - [Example: Using the RockYou Wordlist](#example-using-the-rockyou-wordlist)
+- [Conclusion](#conclusion)
+- [Contributions](#contributions)
+- [License](#license)
+- [Contact](#contact)
 
 ## Features
 
@@ -23,8 +44,8 @@ This repository contains Python scripts for performing dictionary attacks to cra
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/python-password-cracker.git
-    cd python-password-cracker
+    git clone https://github.com/awl4114awl/Python-Password-Cracker.git
+    cd Python-Password-Cracker
     ```
 
 2. **Create a dictionary file**:
@@ -91,36 +112,15 @@ if __name__ == "__main__":
     crack_password(hashed_password, dictionary_file)
 ```
 
-### Explanation
-
-1. **Hash Function**:
-    - `hash_password(password)`: Takes a password string and returns its SHA-256 hash.
-
-2. **Load Dictionary**:
-    - `load_dictionary(dict_file)`: Reads the dictionary file and returns a list of potential passwords.
-
-3. **Crack Password**:
-    - `crack_password(hash_to_crack, dict_file)`: Iterates through the list of potential passwords, hashes each one, and compares it to the target hash. If a match is found, it prints the password.
-
-4. **Main Block**:
-    - Replace `hashed_password` with the actual hash you want to crack.
-    - Replace `dictionary_file` with the path to your dictionary file.
-
 ### Running the Script
 
 Run the basic script from the command line:
 
 ```bash
-python password_cracker.py
+python basic_password_cracker.py
 ```
 
-This will attempt to crack the specified hash using the passwords in `dictionary.txt`. Adjust the `hashed_password` and `dictionary_file` variables as needed.
-
 ## Advanced Script
-
-### Overview
-
-The advanced script adds multi-algorithm support, salted hashes, and multi-threading for improved performance.
 
 ### Enhancing the Basic Script
 
@@ -236,6 +236,15 @@ if __name__ == "__main__":
 
     crack_password_mt(hashed_password, dictionary_file)
 ```
+
+### Running the Script
+
+Run the advanced script from the command line:
+
+```bash
+python advanced_password_cracker.py
+```
+
 ## Obtaining a Dictionary File
 
 There are several sources where you can obtain dictionary files (wordlists) for password cracking. Here are a few popular options:
@@ -262,7 +271,9 @@ There are several sources where you can obtain dictionary files (wordlists) for 
     - GitHub Repository: [CUPP](https://github.com/Mebus/cupp)
 
 6. **Online Collections**:
-    - You can also search for other wordlists available online. A simple Google search for "password wordlist" or "dictionary file for password cracking" can yield many results.
+    - You can also search for other wordlists available online. A simple Google search for "password wordlist
+
+" or "dictionary file for password cracking" can yield many results.
 
 ### Example: Using the RockYou Wordlist
 
@@ -282,30 +293,9 @@ To use the RockYou wordlist in your project:
 
 Make sure to comply with any licensing or usage terms associated with the wordlists you use.
 
-### Customization
-
-- **Target Hash Algorithm**:
-    ```python
-    hash_to_crack = '5d41402abc4b2a76b9719d911017c592'  # Example MD5 hash for 'hello'
-    algorithm = 'md5'
-    ```
-
-- **Dictionary File**:
-    ```python
-    dictionary_file = 'path/to/your/dictionary.txt'
-    ```
-
-### Running the Script
-
-Run the advanced script from the command line:
-
-```bash
-python advanced_password_cracker.py
-```
-
 ## Conclusion
 
-The provided script is basic and serves as a good starting point for understanding password cracking concepts. You can enhance it with advanced features to make it more robust and efficient, depending on your learning goals and requirements.
+The provided scripts serve as a good starting point for understanding password cracking concepts. You can enhance them with advanced features to make them more robust and efficient, depending on your learning goals and requirements.
 
 ## Contributions
 
@@ -318,3 +308,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For any inquiries or feedback, please contact [jordanryancalvert@gmail.com](mailto:jordanryancalvert@gmail.com).
+```
+
+Feel free to adjust any part of this README to better fit your preferences or project specifics.
