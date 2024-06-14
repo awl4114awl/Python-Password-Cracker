@@ -236,6 +236,51 @@ if __name__ == "__main__":
 
     crack_password_mt(hashed_password, dictionary_file)
 ```
+## Obtaining a Dictionary File
+
+There are several sources where you can obtain dictionary files (wordlists) for password cracking. Here are a few popular options:
+
+1. **SecLists**:
+    - SecLists is a collection of multiple types of lists used during security assessments. You can find wordlists specifically for password cracking here.
+    - GitHub Repository: [SecLists](https://github.com/danielmiessler/SecLists)
+
+2. **RockYou**:
+    - The RockYou wordlist is one of the most well-known password lists used in security research.
+    - You can find the RockYou wordlist included with many security tools like Kali Linux.
+    - Direct download link: [RockYou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)
+
+3. **Weakpass**:
+    - Weakpass is a project that provides a variety of wordlists for different purposes.
+    - Website: [Weakpass](https://weakpass.com/)
+
+4. **Kali Linux**:
+    - Kali Linux comes pre-installed with several wordlists, including the RockYou wordlist.
+    - After installing Kali Linux, you can find the wordlists in `/usr/share/wordlists`.
+
+5. **Common User Passwords Profiler (CUPP)**:
+    - CUPP is a tool designed to generate custom wordlists based on user-specific information.
+    - GitHub Repository: [CUPP](https://github.com/Mebus/cupp)
+
+6. **Online Collections**:
+    - You can also search for other wordlists available online. A simple Google search for "password wordlist" or "dictionary file for password cracking" can yield many results.
+
+### Example: Using the RockYou Wordlist
+
+To use the RockYou wordlist in your project:
+
+1. **Download the RockYou wordlist**:
+    ```bash
+    wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+    ```
+
+2. **Place the wordlist in your project directory**.
+
+3. **Modify your script to use the RockYou wordlist**:
+    ```python
+    dictionary_file = 'rockyou.txt'
+    ```
+
+Make sure to comply with any licensing or usage terms associated with the wordlists you use.
 
 ### Customization
 
